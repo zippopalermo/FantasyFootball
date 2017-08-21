@@ -1,0 +1,30 @@
+// player.js
+var exports = module.exports = {};
+
+//Use python shell
+var pythonShell = require('python-shell');
+var pyshell = new pythonShell('./pyScripts/player.py');
+
+var player = 'Player Name';
+
+
+exports.name = function(playerName) {
+	
+	console.log('getting the player from player module');
+	
+	var options = {
+		    mode: 'text',
+		    pythonOptions: ['-u'],
+		    args: [playerName]
+		};
+	
+	pythonShell.run('./pyScripts/player.py', options, function (err, results) {
+	    if (err) throw err;
+	    // results is an array consisting of messages collected during execution
+	    console.log(results);
+	    player = results.toString();
+	    console.log('This is player now: ' + player);
+	});
+	
+	return player;
+};
