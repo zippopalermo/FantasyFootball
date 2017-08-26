@@ -5,8 +5,7 @@ var exports = module.exports = {};
 var pythonShell = require('python-shell');
 var pyshell = new pythonShell('./pyScripts/player.py');
 
-var player = 'Player Name';
-
+var player
 
 exports.name = function(playerName) {
 	
@@ -14,16 +13,16 @@ exports.name = function(playerName) {
 	
 	var options = {
 		    mode: 'text',
-		    pythonOptions: ['-u'],
 		    args: [playerName]
 		};
+	
+	console.log('Arguments passed to python: ' + options.args)
 	
 	pythonShell.run('./pyScripts/player.py', options, function (err, results) {
 	    if (err) throw err;
 	    // results is an array consisting of messages collected during execution
 	    console.log(results);
-	    player = results.toString();
-	    console.log('This is player now: ' + player);
+	    player = results;
 	});
 	
 	return player;
