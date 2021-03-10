@@ -1,2 +1,1 @@
 # FantasyFootball
-![ammenu](ammenu.png)
