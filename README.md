@@ -28,7 +28,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 **AssetManagement WebClient**<br>
 Simple VueJS based Webclient allowing registration to and usage of the AssetManagement Service.
 <p><p/>
-![title bar](pyScripts/titlebar.JPG)
+![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
 
 Table of contents
 =================
