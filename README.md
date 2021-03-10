@@ -28,7 +28,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 **AssetManagement WebClient**<br>
 Simple VueJS based Webclient allowing registration to and usage of the AssetManagement Service.
 <p><p/>
-    ![title bar](/TitleBar.JPG?raw=true)
+    ![title bar](pyScripts/titlebar.jpg)
 
 Table of contents
 =================
